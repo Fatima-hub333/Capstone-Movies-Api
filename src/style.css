@@ -126,16 +126,19 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px solid black;
+  width: 96%;
+  margin: auto;
 }
 
 .modal {
   display: none;
   position: fixed;
   background-color: rgb(206, 209, 202);
-  width: 50%;
+  width: 75%;
   height: 100%;
   bottom: 0;
-  margin-left: 160px;
+  margin-left: 41px;
   overflow-y: scroll;
 }
 
