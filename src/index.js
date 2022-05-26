@@ -12,10 +12,13 @@ const logo = document.querySelector('header img');
 const apiurl = 'https://api.tvmaze.com/search/shows?q=comedy';
 const popup = document.querySelector('.modal');
 const movies = document.querySelector('#movietotal');
+const likesurl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/KnDLmrih7aiYfd0ihv9H/likes/';
 const commenturl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/KnDLmrih7aiYfd0ihv9H/comments/';
 const comments = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/KnDLmrih7aiYfd0ihv9H/comments?item_id=';
 
+let likesnum;
 let imgurl;
+let likescounter;
 let itemscounter;
 let commentCounter;
 logo.src = moviesimg;
@@ -27,6 +30,10 @@ const hide = (msg) => {
 // Getting data from Api if promise status resolve
 const myPromise = new Promise((resolve) => {
   resolve(api.getdata(apiurl));
+});
+
+const mypromiseb = new Promise((resolve) => {
+  resolve(api.getlikes(likesurl));
 });
 
 myPromise.then((result) => {
@@ -99,6 +106,33 @@ myPromise.then((result) => {
             commentCounter.classList.add('active');
           });
         }
+      });
+    });
+  });
+
+  const liketext = document.querySelectorAll('.like-text');
+  const likebutton = document.querySelectorAll('.like');
+  mypromiseb.then((result) => {
+    likesnum = api.likes(result);
+    likescounter = likesnum;
+    liketext.forEach((element, index) => {
+      if (likesnum[index] <= 1) {
+        element.textContent = `${likesnum[index]} like`;
+      } else {
+        element.textContent = `${likesnum[index]} likes`;
+      }
+    });
+    likebutton.forEach((element, index) => {
+      element.addEventListener('click', () => {
+        api.postlike(likesurl, index);
+        likescounter[index] += +1;
+        liketext.forEach((element, index) => {
+          if (likesnum[index] <= 1) {
+            element.textContent = `${likescounter[index]} like`;
+          } else {
+            element.textContent = `${likescounter[index]} likes`;
+          }
+        });
       });
     });
   });
