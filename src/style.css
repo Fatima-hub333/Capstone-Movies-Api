@@ -1,3 +1,38 @@
-.hello {
-  color: red;
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  column-gap: 100px;
+}
+
+header img {
+  width: 300px;
+  height: 100px;
+  animation-name: showlogo;
+  animation-duration: 4s;
+}
+
+@keyframes showlogo {
+  from {
+    width: 1px;
+    height: 1px;
+  }
+
+  to {
+    width: 300px;
+    height: 100px;
+  }
+}
+
+#categories {
+  display: flex;
+  column-gap: 50px;
+  padding-left: 0;
+}
+
+#categories li {
+  list-style: none;
+  font-size: 36px;
+  font-weight: bold;
 }

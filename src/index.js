@@ -1,14 +1,6 @@
-import _ from 'lodash';
 import './style.css';
+import moviesimg from './movies_img.png';
 
-function component() {
-  const element = document.createElement('div');
+const logo = document.querySelector('header img');
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+logo.src = moviesimg;
