@@ -1,3 +1,164 @@
-.hello {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  column-gap: 100px;
+}
+
+header img {
+  width: 300px;
+  height: 100px;
+  animation-name: showlogo;
+  animation-duration: 4s;
+}
+
+@keyframes showlogo {
+  from {
+    width: 1px;
+    height: 1px;
+  }
+
+  to {
+    width: 300px;
+    height: 100px;
+  }
+}
+
+#categories {
+  display: flex;
+  column-gap: 50px;
+  padding-left: 0;
+}
+
+#categories li {
+  list-style: none;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.moviediv {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto auto auto auto;
+  gap: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 50px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.poster {
+  width: 100%;
+  height: 100%;
+  animation-name: showitems;
+  animation-duration: 1s;
+}
+
+@keyframes showitems {
+  from {
+    width: 1px;
+    height: 1px;
+  }
+
+  to {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.like {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.like:active {
+  filter:
+    invert(16%) sepia(99%) saturate(7404%) hue-rotate(4deg)
+    brightness(95%) contrast(118%);
+}
+
+.like-text {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+button {
+  padding: 0;
+}
+
+.comments {
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 0;
+  cursor: pointer;
+}
+
+.reservations {
+  border: solid black 1px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  background-color: rgb(206, 209, 202);
+  width: 50%;
+  height: 100%;
+  bottom: 0;
+  margin-left: 160px;
+  overflow-y: scroll;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+  width: 90%;
+}
+
+footer {
+  border: solid black 2px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgb(203, 203, 203);
+  bottom: 0;
+  width: 100%;
 }
