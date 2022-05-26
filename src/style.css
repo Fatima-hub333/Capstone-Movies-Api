@@ -116,6 +116,27 @@ button {
   font-weight: bolder;
 }
 
+footer {
+  border: solid black 2px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgb(203, 203, 203);
+  bottom: 0;
+  width: 100%;
+}
+
+/* Comments-Popup CSS */
+.moviediv {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto auto auto auto;
+  gap: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 50px;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -141,25 +162,4 @@ button {
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
   width: 90%;
-}
-
-footer {
-  border: solid black 2px;
-  font-weight: bold;
-  font-size: 16px;
-  text-align: center;
-  background-color: rgb(203, 203, 203);
-  bottom: 0;
-  width: 100%;
-}
-
-/* Comments-Popup CSS */
-.moviediv {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: auto auto auto auto;
-  gap: 10px;
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-bottom: 50px;
 }
