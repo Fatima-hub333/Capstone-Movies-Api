@@ -1,5 +1,3 @@
-# Module-1_Capstone-1
-# Capstone-1
 ![](https://img.shields.io/badge/JavaScriptCapstone-blueviolet)
 
 
