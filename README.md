@@ -15,12 +15,11 @@ In the future, we could add another interface to create reservations for a table
 
 You may read [here](https://github.com/microverseinc/curriculum-javascript/blob/main/group-capstone/js_capstone.md) the document with all the requirements for the project document.
 
-![screenshot]()
+![screenshot](JavaScript-Capstone-LIveDemo.png)
 
-## [LiveDemo] (https://fatima-hub333.github.io/Capstone-Movies-Api/)
+## [LiveDemo] (https://fatima-hub333.github.io/Capstone-Movies-Api/dist/)
 
-## [VideoPresentationLink]
-()
+## [VideoPresentationLink] (https://drive.google.com/file/d/10yKQECj4URq3-oL9tQLB72YSUIvokhCT/view?usp=sharing)
 
 ## Built With
 
