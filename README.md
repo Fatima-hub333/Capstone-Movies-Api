@@ -17,7 +17,7 @@ You may read [here](https://github.com/microverseinc/curriculum-javascript/blob/
 
 ![screenshot](JavaScript-Capstone-LIveDemo.png)
 
-## [LiveDemo](https://fatima-hub333.github.io/Capstone-Movies-Api)
+## [LiveDemo](https://fatima-hub333.github.io/Capstone-Movies-Api/dist/)
 
 ## [VideoPresentationLink](https://drive.google.com/file/d/10yKQECj4URq3-oL9tQLB72YSUIvokhCT/view?usp=sharing)
 
